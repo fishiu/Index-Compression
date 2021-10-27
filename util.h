@@ -6,18 +6,20 @@
 #include <string.h>
 #include <math.h>
 
-typedef struct PointerWithSize {
+#define MAX_N 10001
+
+typedef struct ArrayPointerWithSize {
     void *pointer;
     int size;
-} PointerSize;
+} SizeArray;
 
 /**
  * convert int to binary string
  * @param num decimal
  * @return
  */
-char *itoa(int num);
+char *myItoa(int num);
 
-PointerSize str2byteStream(const char *str);
+SizeArray str2byteStream(const char *str);
 
 #endif //UTIL_H

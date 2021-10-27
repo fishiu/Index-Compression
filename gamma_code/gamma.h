@@ -3,7 +3,9 @@
 
 #include "../util.h"
 
-PointerSize gammaEncode(int number);
+SizeArray gammaEncode(int number);
+
+SizeArray gammaDecode(const char* toDecode);
 
 
 #endif //GM_H

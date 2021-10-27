@@ -1,14 +1,15 @@
 #include "util.h"
 
-char *itoa(int num) {
-    char *res = malloc(sizeof(char) * 8);
+char *myItoa(int num) {
+    char *res = malloc(sizeof(char) * 9);
     for (int i = 0; i < 8; ++i) {
         res[7 - i] = (num >> i) & 1 ? '1' : '0';
     }
+    res[8] = 0;
     return res;
 }
 
-PointerSize str2byteStream(const char *str) {
+SizeArray str2byteStream(const char *str) {
     int n = (int) strlen(str) / 8;
     unsigned char *byteStream = malloc(sizeof(char) * n);
     for (int i = 0; i < n; ++i) {
@@ -18,6 +19,6 @@ PointerSize str2byteStream(const char *str) {
             byteStream[i] += v << (7 - j);
         }
     }
-    PointerSize res = {byteStream, n};
+    SizeArray res = {byteStream, n};
     return res;
 }

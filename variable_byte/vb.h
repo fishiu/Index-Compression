@@ -4,9 +4,9 @@
 #include "../util.h"
 
 
-PointerSize encode(int number);
+SizeArray encode(int number);
 
-PointerSize decode(const unsigned char *byteStream, int streamSize);
+SizeArray decode(const unsigned char *byteStream, int streamSize);
 
 
 #endif //VB_H

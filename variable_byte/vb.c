@@ -1,9 +1,8 @@
 #include "vb.h"
 
-#define MAX_N 10001
 #define OFFSET 128
 
-PointerSize encode(int number) {
+SizeArray encode(int number) {
     int cnt = 0;
     unsigned char res[MAX_N] = {0};
     while (number >= OFFSET) {
@@ -19,12 +18,12 @@ PointerSize encode(int number) {
     // number of bytes is cnt
     for (int i = 0; i < cnt; ++i)
         reversedRes[i] = res[cnt - i - 1];
-    PointerSize encodeRes = {reversedRes, cnt};
+    SizeArray encodeRes = {reversedRes, cnt};
     return encodeRes;
 }
 
 
-PointerSize decode(const unsigned char *byteStream, int streamSize) {
+SizeArray decode(const unsigned char *byteStream, int streamSize) {
     int tmpRes[MAX_N] = {0};
     int cnt = 0;
     int tmpNum = 0;
@@ -40,6 +39,6 @@ PointerSize decode(const unsigned char *byteStream, int streamSize) {
     int *res = malloc(sizeof(int) * cnt);
     memcpy(res, tmpRes, sizeof(int) * cnt);
 
-    PointerSize decodeRes = {res, cnt};
+    SizeArray decodeRes = {res, cnt};
     return decodeRes;
 }

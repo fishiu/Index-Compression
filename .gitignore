@@ -1,4 +1,8 @@
 .idea
 .vscode
+.vs
+
 .DS_Store
+
 cmake-build-debug
+out
