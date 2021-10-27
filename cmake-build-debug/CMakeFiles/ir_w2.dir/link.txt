@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/cc -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/ir_w2.dir/main.c.o CMakeFiles/ir_w2.dir/variable_byte/vb.c.o CMakeFiles/ir_w2.dir/util.c.o CMakeFiles/ir_w2.dir/gamma_code/gamma.c.o -o ir_w2 
