@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/leverest/Desktop/ir_w2/gamma_code/gamma.h
+../util.h
+/Users/leverest/Desktop/ir_w2/util.h
+
+/Users/leverest/Desktop/ir_w2/main.c
+util.h
+/Users/leverest/Desktop/ir_w2/util.h
+variable_byte/vb.h
+/Users/leverest/Desktop/ir_w2/variable_byte/vb.h
+gamma_code/gamma.h
+/Users/leverest/Desktop/ir_w2/gamma_code/gamma.h
+
+/Users/leverest/Desktop/ir_w2/util.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+math.h
+-
+
+/Users/leverest/Desktop/ir_w2/variable_byte/vb.h
+../util.h
+/Users/leverest/Desktop/ir_w2/util.h
+
